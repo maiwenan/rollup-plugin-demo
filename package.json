@@ -1,0 +1,43 @@
+{
+  "name": "rollup-plugin-demo",
+  "version": "1.0.0",
+  "description": "elf markdown demo",
+  "main": "lib/index.js",
+  "author": "maiwenan <maiwenan@gmail.com>",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "eslint": "eslint lib/**/*.js"
+  },
+  "lint-staged": {
+    "{lib}/**/*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "highlight.js": "^9.13.1",
+    "markdown-it": "^8.4.2",
+    "markdown-it-container": "^2.0.0",
+    "rollup-pluginutils": "^2.8.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0"
+  }
+}
